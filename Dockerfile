@@ -1,2 +1,2 @@
 FROM rclone/rclone:latest
-CMD ["lsd", "aws:fashion-channel", "--log-level", "INFO"]
+CMD ["copy", "aws:fashion-channel", "bunny:kadabratv1", "--transfers", "16", "--checkers", "32", "--s3-chunk-size", "64M", "--fast-list", "--log-level", "INFO", "--stats", "30s"]
